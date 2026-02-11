@@ -1,0 +1,191 @@
+:root {
+    --israel-blue: #0038B8;
+    --jerusalem-gold: #D4AF37;
+    --clean-white: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Background Logic */
+.flag-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('flag.jpeg') no-repeat center center/cover;
+    opacity: 0.15; /* Keeps the flag visible but subtle */
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.temple-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--jerusalem-gold);
+    margin-right: 15px;
+}
+
+.site-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--israel-blue);
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--israel-blue);
+    font-weight: 600;
+}
+
+.donate-btn {
+    background: var(--jerusalem-gold);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Content Cards */
+.content-section {
+    padding: 50px 10%;
+}
+
+.narrative-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    margin-bottom: 30px;
+    border-left: 8px solid var(--israel-blue);
+    border-radius: 10px;
+}
+
+.triumphant {
+    border-left: 8px solid var(--jerusalem-gold);
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 10%;
+}
+
+.song-card {
+    background: white;
+    border: 1px solid var(--jerusalem-gold);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Sticky Player */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--israel-blue);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Hero Section Styling */
+.hero {
+    /* Ensures the section fills the entire screen height */
+    min-height: 100vh; 
+    
+    /* Flexbox magic to center everything */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical center */
+    align-items: center;     /* Horizontal center */
+    
+    text-align: center;
+    padding: 0 10%; /* Adds breathing room on the sides */
+    
+    /* This creates a subtle glass effect so the flag shows through 
+       but the text remains very easy to read */
+    background: rgba(255, 255, 255, 0.4); 
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem; /* Makes the title big and impactful */
+    color: var(--israel-blue);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle depth */
+}
+
+
+/* Remove the gap from the hero/header container */
+.hero-section, .header-container {
+    margin-top: 0 !important;
+    padding-top: 20px; /* Small padding inside so text isn't touching the line */
+    background-image: url('flag.jpeg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* If you are using a main heading <h1>, remove its top margin */
+h1 {
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+/* 1. Remove browser default margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Ensure the Navbar doesn't push the header away */
+nav {
+    margin-bottom: 0 !important;
+    /* Keep your existing padding/flex settings as they are */
+}
+
+/* 3. Pull the Hero section flush against the Nav */
+.hero {
+    margin-top: 0 !important;
+    padding-top: 40px; /* Adjust this to control spacing inside the banner */
+    /* Ensure your background-image settings are here */
+}
+
+/* 4. Remove the default margin from the H1 that often creates a gap */
+.hero h1 {
+    margin-top: 0;
+}
+

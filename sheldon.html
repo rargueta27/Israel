@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legacy of Sheldon Adelson | Israel Forever</title>
+    <style>
+        /* Israel Flag Background Logic */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            /* Top and Bottom Blue Stripes */
+            background-image: 
+                linear-gradient(#0038b8 100%, transparent 100%),
+                linear-gradient(#0038b8 100%, transparent 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 120px, 100% 120px;
+            background-position: top, bottom;
+            min-height: 100vh;
+        }
+
+        /* Navbar: Matching your screenshot style */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .temple-img {
+            height: 50px;
+            width: auto;
+        }
+
+        .brand-name {
+            color: #0038b8;
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #0038b8;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .donate-btn {
+            background-color: #d4af37;
+            color: white !important;
+            padding: 10px 25px !important;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section with Watermark - Zero Margin to remove gap */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('flag.jpeg'); /* Using your flag image as a faint watermark */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* Creates the faded watermark look from your screenshot */
+            background-color: rgba(255, 255, 255, 0.85);
+            background-blend-mode: lighten;
+        }
+
+        .hero h1 {
+            color: #0038b8;
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: #444;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 20px auto 0 auto;
+        }
+
+        /* Content Sections */
+        .content-body {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        h2 { color: #0038b8; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 5px; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="Temple.Jpeg" alt="Temple" class="temple-img">
+            <span class="brand-name">ISRAEL FOREVER</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">History</a>
+            <a href="index.html">Home</a>
+            <button class="donate-btn" onclick="window.location.href='donate.html';">
+  DONATE
+</button>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>The Legacy of Sheldon Adelson</h1>
+        <p>Honoring the vision of a man who built empires and strengthened the heart of the Jewish people.</p>
+    </div>
+
+    <div class="content-body">
+        <h2>From Entrepreneur to Visionary</h2>
+        <p>Sheldon Adelson's story began in a modest neighborhood in Boston, but his ambition knew no borders. By founding the Las Vegas Sands Corp, he revolutionized the concept of the integrated resort. However, his business success was always a means to a greater end: the preservation and celebration of Jewish heritage.</p>
+
+        <h2>A Philanthropic Giant</h2>
+        <p>Alongside his wife Miriam, Sheldon became the driving force behind <strong>Birthright Israel</strong>, providing a bridge for young Jews across the globe to return to their roots. His contributions to Yad Vashem and countless Israeli security and medical initiatives ensure that his name will forever be linked to the "Eternal Return."</p>
+    </div>
+
+    <footer>
+        <p>&copy; Israel Forever: The Eternal Return</p>
+    </footer>
+
+</body>
+</html>
