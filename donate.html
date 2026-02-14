@@ -124,12 +124,22 @@
         <h1>Thank You for your support as we keep educating people about Israel, and composing more music for Israel</h1>
         <p class="adelson-credit">Sheldon And Doctor Miriam Adelson</p>
         
-        <button class="donate-btn">Donate Securely</button>
+        <button id="stripe-button" class="donate-btn">Donate Securely</button>
     </div>
 
     <footer>
         &copy; 2026 Israel Forever: The Eternal Return
     </footer>
+
+    <script>
+        document.getElementById('stripe-button').addEventListener('click', function() {
+            // This will open the Stripe link in the same window
+            window.location.href = 'https://buy.stripe.com/bJe6oIetJ1K44W72vqfQI01';
+            
+            // NOTE: If you want it to open in a NEW tab instead, use this line:
+            // window.open('https://buy.stripe.com/bJe6oIetJ1K44W72vqfQI01', '_blank');
+        });
+    </script>
 
 </body>
 </html>
