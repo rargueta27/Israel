@@ -189,3 +189,79 @@ nav {
     margin-top: 0;
 }
 
+/* ============================= */
+/* HAMBURGER MENU IMPROVEMENTS */
+/* ============================= */
+
+/* Hide hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: var(--israel-blue);
+    cursor: pointer;
+}
+
+/* Smooth mobile menu animation */
+.nav-links {
+    transition: all 0.3s ease;
+}
+
+/* ============================= */
+/* MOBILE NAVBAR */
+/* ============================= */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Stack navbar nicely */
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    /* Mobile dropdown menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(255,255,255,0.98);
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 20px 0;
+        gap: 1.2rem;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        backdrop-filter: blur(6px);
+    }
+
+    /* When active */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Make donate button mobile friendly */
+    .donate-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Hero text responsive */
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .site-name {
+        font-size: 1.2rem;
+    }
+
+    .temple-icon {
+        height: 40px;
+        width: 40px;
+    }
+}
+
