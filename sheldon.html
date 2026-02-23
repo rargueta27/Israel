@@ -118,24 +118,84 @@
             color: #666;
             font-weight: bold;
         }
+        /* ============================= */
+/* HAMBURGER MENU */
+/* ============================= */
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #0038b8;
+    cursor: pointer;
+}
+
+/* smooth animation */
+.nav-links {
+    transition: all 0.3s ease;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #ffffff;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        padding: 20px 0;
+        gap: 15px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-left">
-            <img src="Temple.Jpeg" alt="Temple" class="temple-img">
-            <span class="brand-name">ISRAEL FOREVER</span>
-        </div>
-        <div class="nav-links">
-            <a href="music.html">Tribute Music</a>
-            <a href="index.html">History</a>
-            <a href="index.html">Home</a>
-            <button class="donate-btn" onclick="window.location.href='donate.html';">
-  DONATE
-</button>
-        </div>
-    </nav>
+  <nav>
+    <div class="nav-left">
+        <img src="Temple.Jpeg" alt="Temple" class="temple-img">
+        <span class="brand-name">ISRAEL FOREVER</span>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        ☰
+    </button>
+
+    <div class="nav-links" id="navLinks">
+        <a href="music.html">Tribute Music</a>
+        <a href="index.html">History</a>
+        <a href="index.html">Home</a>
+        <button class="donate-btn" onclick="window.location.href='donate.html';">
+            DONATE
+        </button>
+    </div>
+</nav>
 
     <div class="hero">
         <h1>The Legacy of Sheldon Adelson</h1>
@@ -153,6 +213,13 @@
     <footer>
         <p>&copy; Israel Forever: The Eternal Return</p>
     </footer>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
 </body>
 </html>
