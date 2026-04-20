@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Kingdom of Israel Map</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* Dark background for the scrollable area */
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            position: sticky; /* Keeps the title visible while scrolling */
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            font-size: 1.8em; /* Slightly smaller for mobile screens */
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows buttons to stack on small screens */
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0000FF;
+        }
+
+        /* Map Container Settings */
+        .map-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px; /* Space at the bottom */
+        }
+
+        .map-image {
+            max-width: 100%; /* Ensures it doesn't overflow horizontally */
+            height: auto;    /* Maintains aspect ratio */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is the real map of Israel. We will get this whole land back.</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="music.html" class="btn">Tribute Music</a>
+            <a href="donate.html" class="btn">Donate</a>
+        </nav>
+    </header>
+
+    <div class="map-container">
+        <img src="reinodeIsrael.png" alt="United Kingdom of Israel Map" class="map-image">
+    </div>
+</body>
+</html>
